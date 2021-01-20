@@ -3,6 +3,8 @@ backend:
   branch: main
 site_url: https://dbs-headless-poc.netlify.app/
 display_url: https://dbs-headless-poc.netlify.app/
+media_folder: "src/images"
+public_folder: "content/assets"
 slug:
   encoding: "ascii"
   clean_accents: true
