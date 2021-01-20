@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-site_url: https://dbs-docs.netlify.app/
-display_url: https://dbs-docs.netlify.app/
+site_url: https://dbs-headless-poc.netlify.app/
+display_url: https://dbs-headless-poc.netlify.app/
 slug:
   encoding: "ascii"
   clean_accents: true
