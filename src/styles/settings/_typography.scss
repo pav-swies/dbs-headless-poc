@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "JetBrainsMono-Light";
+  src: url("./../fonts/JetBrainsMono-Light.ttf");
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Medium";
+  src: url("./../fonts/JetBrainsMono-Medium.ttf");
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Bold";
+  src: url("./../fonts/JetBrainsMono-Bold.ttf");
+  font-display: swap;
+  font-weight: bold;
+}
+
+$light-font: "JetBrainsMono-Light";
+$regular-font: "JetBrainsMono-Medium";
+$heavy-font: "JetBrainsMono-Bold";
+
+
+$font-flea: 1rem;
+$font-mouse: 1.2rem;
+$font-gerbil: 1.44rem;
+$font-cat: 1.728rem;
+$font-dog: 2.074rem;
+$font-horse: 2.488rem;
+$font-whale: 2.986rem;

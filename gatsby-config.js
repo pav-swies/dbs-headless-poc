@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "DbS Gatsby PoC",
+    title: "Headless PoC",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -14,6 +14,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./content/blog/",
+      },
+      __key: "blog",
     },
   ],
 };

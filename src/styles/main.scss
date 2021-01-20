@@ -1,0 +1,113 @@
+@import "./settings/reset";
+@import "./settings/colours";
+@import "./settings/dimensions";
+@import "./settings/breakpoints";
+@import "./settings/typography";
+
+@import "./util/wrappers";
+
+* {
+  font-family: $light-font;
+}
+
+html {
+  background-color: $black;
+  color: $white;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  font-family: inherit;
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+h1 {
+  font-family: $heavy-font;
+  font-size: $font-dog;
+
+  @include medium-breakpoint {
+    font-size: $font-whale;
+  }
+}
+
+h2 {
+  font-family: $heavy-font;
+  font-size: $font-cat;
+
+  @include medium-breakpoint {
+    font-size: $font-horse;
+  }
+}
+
+h3 {
+  font-family: $heavy-font;
+  font-size: $font-gerbil;
+
+  @include medium-breakpoint {
+    font-size: $font-dog;
+  }
+}
+
+h4 {
+  font-family: $heavy-font;
+  font-size: $font-mouse;
+
+  @include medium-breakpoint {
+    font-size: $font-cat;
+  }
+}
+
+h5 {
+  font-family: $heavy-font;
+  font-size: $font-mouse;
+
+  @include medium-breakpoint {
+    font-size: $font-gerbil;
+  }
+}
+
+h6 {
+  font-family: $heavy-font;
+  font-size: $font-mouse;
+}
+
+p {
+  line-height: 1.8;
+  margin: 0;
+
+  & + & {
+    margin-top: $spacing-gerbil;
+  }
+}
+
+.hero-text {
+  font-family: $regular-font;
+  font-size: $font-dog;
+  color: $grey;
+  line-height: 1.4;
+
+  span {
+    font-family: $heavy-font;
+    color: $white;
+  }
+
+  @include medium-breakpoint {
+    font-size: 4rem;
+  }
+
+  @include large-breakpoint {
+    font-size: 6rem;
+  }
+}
+
+@import "./components/component-header";
+@import "./components/component-footer";

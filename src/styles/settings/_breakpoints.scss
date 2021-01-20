@@ -1,0 +1,17 @@
+@mixin small-breakpoint {
+  @media screen and (min-width: $small-breakpoint) {
+    @content;
+  }
+}
+
+@mixin medium-breakpoint {
+  @media screen and (min-width: $medium-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-breakpoint {
+  @media screen and (min-width: $large-breakpoint) {
+    @content;
+  }
+}

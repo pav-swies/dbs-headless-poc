@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-gerbil;
+  padding-top: $spacing-mouse;
+  padding-bottom: $spacing-mouse;
+  border-bottom: 1px solid $dark-grey;
+
+  @include medium-breakpoint {
+    margin-bottom: $spacing-whale;
+  }
+
+  &--root {
+    border-bottom: none;
+  }
+}
+
+.header-logo {
+  font-family: $heavy-font;
+}
+
+a.header-logo {
+  font-size: $font-flea;
+  text-decoration: none;
+}
+
+h1.header-logo {
+  font-size: $font-flea;
+
+  @include small-breakpoint {
+    font-size: $font-gerbil;
+  }
+
+  @include medium-breakpoint {
+    font-size: $font-cat;
+  }
+}
+
+.header-links {
+  display: flex;
+
+  a {
+    text-decoration: none;
+
+    + a {
+      margin-left: $spacing-mouse;
+  
+      @include medium-breakpoint {
+        margin-left: $spacing-gerbil;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:last-child {
+      color: $green;
+    }
+  }
+}

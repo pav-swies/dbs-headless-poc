@@ -1,0 +1,31 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: $spacing-mouse;
+  padding-right: $spacing-mouse;
+
+  & > * {
+    width: 100%;
+    max-width: $site-max-width;
+  }
+
+  & > :first-child {
+    margin-top: $spacing-mouse;
+
+    @include medium-breakpoint {
+      margin-top: $spacing-gerbil;
+    }
+  }
+
+  & > :last-child {
+    margin-top: auto;
+    margin-bottom: $spacing-mouse;
+
+    @include medium-breakpoint {
+      margin-bottom: $spacing-gerbil;
+    }
+  }
+}
