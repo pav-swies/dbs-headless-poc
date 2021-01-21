@@ -24,7 +24,7 @@ const Blog = ({ data, location }) => {
 
 export default Blog;
 
-export const pageQuery = graphql`
+export const blogQuery = graphql`
   query ($id: String!) {
     site {
       siteMetadata {

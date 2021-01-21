@@ -1,20 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
-  };
-};
-
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -23,7 +9,17 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000) {
+      blog: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000, filter: {fileAbsolutePath: {regex: "/blog//"}}) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      work: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000, filter: {fileAbsolutePath: {regex: "/work//"}}) {
         edges {
           node {
             id
@@ -39,7 +35,10 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const blog = result.data.blog.edges;
+    const work = result.data.work.edges;
+
+    blog.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: blogTemplate,
@@ -48,5 +47,29 @@ exports.createPages = ({ actions, graphql }) => {
         },
       });
     });
+
+    work.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: workTemplate,
+        context: {
+          id: node.id,
+        },
+      });
+    });
   });
+};
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode });
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
+  };
 };

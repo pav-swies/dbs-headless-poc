@@ -25,7 +25,7 @@ const Work = ({ data, location }) => {
 
 export default Work;
 
-export const pageQuery = graphql`
+export const workQuery = graphql`
   query ($id: String!) {
     site {
       siteMetadata {
