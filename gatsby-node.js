@@ -9,53 +9,45 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      blog: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000, filter: {fileAbsolutePath: {regex: "/blog//"}}) {
+      posts: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000) {
         edges {
           node {
             id
             fields {
               slug
             }
-          }
-        }
-      }
-      work: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000, filter: {fileAbsolutePath: {regex: "/work//"}}) {
-        edges {
-          node {
-            id
-            fields {
-              slug
+            frontmatter {
+              type
             }
           }
         }
       }
-    }
+    }  
   `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
 
-    const blog = result.data.blog.edges;
-    const work = result.data.work.edges;
+    const posts = result.data.posts.edges;
 
-    blog.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: blogTemplate,
-        context: {
-          id: node.id,
-        },
-      });
-    });
-
-    work.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: workTemplate,
-        context: {
-          id: node.id,
-        },
-      });
+    posts.forEach(({ node }) => {
+      if (node.frontmatter.type === 'blog') {
+        createPage({
+          path: node.fields.slug,
+          component: blogTemplate,
+          context: {
+            id: node.id,
+          }
+        });
+      } else {
+        createPage({
+          path: node.fields.slug,
+          component: workTemplate,
+          context: {
+            id: node.id,
+          }
+        });
+      }
     });
   });
 };
