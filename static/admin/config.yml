@@ -18,6 +18,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown", date_format: "DD/MM/YYYY" }
+      - {label: "Type", name: "type", widget: "hidden", default: "blog"}
   - name: "work"
     label: "Work"
     folder: "content/work"
@@ -26,3 +27,4 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown", date_format: "DD/MM/YYYY" }
+      - {label: "Type", name: "type", widget: "hidden", default: "work"}
