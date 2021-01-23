@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Headless PoC",
+    titleTemplate: "%s · The Real Hero",
+    description: "A proof of concept site using a headless CMS.",
+    url: "https://dbs-headless-poc.netlify.app",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",

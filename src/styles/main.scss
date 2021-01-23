@@ -11,8 +11,8 @@
 }
 
 html {
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $grey;
   font-size: 14px;
 }
 
@@ -24,9 +24,11 @@ a {
   font-family: inherit;
   color: inherit;
   text-decoration: underline;
+  
 
   &:hover {
-    color: $green;
+    color: $blue;
+    text-decoration-style: dashed;
   }
 }
 
@@ -89,25 +91,12 @@ p {
   }
 }
 
-.hero-text {
-  font-family: $regular-font;
-  font-size: $font-dog;
-  color: $grey;
-  line-height: 1.4;
-
-  span {
-    font-family: $heavy-font;
-    color: $white;
-  }
-
-  @include medium-breakpoint {
-    font-size: 4rem;
-  }
-
-  @include large-breakpoint {
-    font-size: 6rem;
-  }
+.blog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @import "./components/component-header";
+@import "./components/component-blog-link";
 @import "./components/component-footer";

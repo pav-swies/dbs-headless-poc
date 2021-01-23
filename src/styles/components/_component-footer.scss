@@ -2,4 +2,8 @@
   color: $grey;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-gerbil;
+  padding-top: $spacing-mouse;
+  padding-bottom: $spacing-mouse;
 }

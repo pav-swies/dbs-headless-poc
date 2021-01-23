@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Footer = ({ title }) => {
+const Footer = () => {
 
   return (
     <footer className="footer">
-      <Link to="/">{ title }</Link>
+      <a href="/admin/">CMS</a>
       <Link to="/">GitHub</Link>
     </footer>
   );

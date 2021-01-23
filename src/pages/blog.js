@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../templates/template-layout";
+import Seo from "../components/component-seo";
 import BlogLink from  "../components/component-blog-link";
 
 const BlogPage = ({ 
@@ -16,12 +17,17 @@ const BlogPage = ({
   .map(edge => <BlogLink key={ edge.node.id } post={ edge.node } />);
 
   const siteTitle = data.site.siteMetadata.title;
+  const siteDescription = data.site.siteMetadata.description;
 
   return (
-    <Layout headerTitle={ siteTitle } footerTitle={ siteTitle } location={ location } >
-      <h1>Blog Posts</h1>
-      <ul>
-        { Posts }
+    <Layout headerTitle={siteTitle} footerTitle={siteTitle} location={location} >
+      <Seo
+        title={siteTitle}
+        description={siteDescription}
+      />
+      <h1>Posts</h1>
+      <ul className="blog-list">
+        {Posts}
       </ul>
     </Layout>
   )

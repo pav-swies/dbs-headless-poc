@@ -7,7 +7,7 @@ const Header = ({ location, title }) => {
 
   const links = (
     <div className="header-links">
-      <Link to="/blog/">Blog</Link>
+      <Link to="/blog/">Posts</Link>
       <a href="/admin/">CMS</a>
     </div>
   );
@@ -15,15 +15,15 @@ const Header = ({ location, title }) => {
   if (isRootPath) {
     return (
       <header className="header header--root">
-        <h1 className="header-logo">{ title }</h1>
-        { links }
+        <h1 className="header-logo">{title}</h1>
+        {links}
       </header>
     );
   } else {
     return (
       <header className="header">
-        <Link className="header-logo" to="/">{ title }</Link>
-        { links }
+        <Link className="header-logo" to="/">{title}</Link>
+        {links}
       </header>
     );
   };

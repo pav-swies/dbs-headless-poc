@@ -4,13 +4,14 @@ import Header from "../components/component-header";
 import Footer from "../components/component-footer";
 
 const Layout = ({ headerTitle, footerTitle, location, children }) => {
+
   return (
     <div className="wrapper">
-      <Header title={ headerTitle } location={ location } />
+      <Header title={headerTitle} location={location} />
       <main>
-        { children }
+        {children}
       </main>
-      <Footer title={ footerTitle } />
+      <Footer title={footerTitle} />
     </div>
   );
 };
