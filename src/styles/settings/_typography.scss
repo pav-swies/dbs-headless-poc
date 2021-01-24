@@ -1,33 +1,82 @@
 @font-face {
-  font-family: "JetBrainsMono-Light";
-  src: url("./../fonts/JetBrainsMono-Light.ttf");
-  font-display: swap;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "JetBrainsMono-Medium";
-  src: url("./../fonts/JetBrainsMono-Medium.ttf");
-  font-display: swap;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "JetBrainsMono-Bold";
-  src: url("./../fonts/JetBrainsMono-Bold.ttf");
+  font-family: "PlayfairDisplay-Bold";
+  src: url("./../fonts/PlayfairDisplay-Bold.woff2") format("woff2"),
+       url("./../fonts/PlayfairDisplay-Bold.woff") format("woff"),
+       url("./../fonts/PlayfairDisplay-Bold.ttf")  format("truetype");
   font-display: swap;
   font-weight: bold;
 }
 
-$light-font: "JetBrainsMono-Light";
-$regular-font: "JetBrainsMono-Medium";
-$heavy-font: "JetBrainsMono-Bold";
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("./../fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+       url("./../fonts/PlayfairDisplay-Regular.woff") format("woff"),
+       url("./../fonts/PlayfairDisplay-Regular.ttf")  format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
 
+@font-face {
+  font-family: "DMSans-Bold";
+  src: url("./../fonts/DMSans-Bold.woff2") format("woff2"),
+       url("./../fonts/DMSans-Bold.woff") format("woff"),
+       url("./../fonts/DMSans-Bold.ttf")  format("truetype");
+  font-display: swap;
+  font-weight: bold;
+}
 
-$font-flea: 1rem;
-$font-mouse: 1.2rem;
-$font-gerbil: 1.44rem;
-$font-cat: 1.728rem;
-$font-dog: 2.074rem;
-$font-horse: 2.488rem;
-$font-whale: 2.986rem;
+@font-face {
+  font-family: "DMSans-BoldItalic";
+  src: url("./../fonts/DMSans-BoldItalic.woff2") format("woff2"),
+       url("./../fonts/DMSans-BoldItalic.woff") format("woff"),
+       url("./../fonts/DMSans-BoldItalic.ttf")  format("truetype");
+  font-display: swap;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMSans-Regular";
+  src: url("./../fonts/DMSans-Regular.woff2") format("woff2"),
+       url("./../fonts/DMSans-Regular.woff") format("woff"),
+       url("./../fonts/DMSans-Regular.ttf")  format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "DMSans-Italic";
+  src: url("./../fonts/DMSans-Italic.woff2") format("woff2"),
+       url("./../fonts/DMSans-Italic.woff") format("woff"),
+       url("./../fonts/DMSans-Italic.ttf")  format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: italic;
+}
+
+$primary-font-regular: "DMSans-Regular";
+$primary-font-regular-italic: "DMSans-Italic";
+$primary-font-bold: "DMSans-Bold";
+$primary-font-bold-italic: "DMSans-BoldItalic";
+
+$secondary-font-regular: "PlayfairDisplay-Regular";
+$secondary-font-bold: "PlayfairDisplay-Bold";
+
+$min-font-size: 16px;
+$max-font-size: 21px;
+
+@mixin typography {
+  font-family: $primary-font-regular;
+  font-size: calc(#{$min-font-size} + ((1vw - 3.5px) * 0.7418));
+  min-height: 0vw;
+
+  @include large-breakpoint {
+    font-size: $max-font-size;
+  }
+}
+
+$font-size-flea: 0.8rem;
+$font-size-ant: 1rem;
+$font-size-mouse: 2rem;
+$font-size-gerbil: 3rem;
+$font-size-cat: 4rem;

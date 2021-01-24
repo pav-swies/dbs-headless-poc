@@ -4,33 +4,35 @@ import { graphql } from "gatsby";
 import Layout from "./template-layout";
 import Seo from "../components/component-seo";
 
-const Work = ({ data, location }) => {
+const BluePost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const pageTitle = `${frontmatter.title} | ${data.site.siteMetadata.title}`;
 
   return (
-    <Layout headerTitle={siteTitle} footerTitle={siteTitle} location={location} >
+    <Layout headerTitle={siteTitle} footerTitle={siteTitle} theme="blue">
       <Seo
         title={pageTitle}
         description={data.markdownRemark.excerpt}
       />
-      <article className="o-doc">
-        <header className="o-doc__header">
-          <p>-------- work template --------</p>
-          <h1 className="o-doc__heading">{frontmatter.title}</h1>
-          <p className="o-doc__date">{frontmatter.date}</p>
+      <article className="blue-post">
+        <header className="blue-post-header">
+          <h1 className="blue-post-title">{frontmatter.title}</h1>
+          <div className="blue-post-info">
+            <p className="blue-post-date">{frontmatter.date}</p>
+            <p className={`blue-post-featured featured-${frontmatter.featured}`}>Featured ★</p>
+          </div>
         </header>
-        <div className="o-doc__content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="blue-post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </Layout>
   );
 };
 
-export default Work;
+export default BluePost;
 
-export const workQuery = graphql`
+export const BluePostQuery = graphql`
   query ($id: String!) {
     site {
       siteMetadata {
@@ -41,6 +43,7 @@ export const workQuery = graphql`
       id
       html
       frontmatter {
+        featured
         title
         date(formatString: "Do MMMM YYYY")
       }

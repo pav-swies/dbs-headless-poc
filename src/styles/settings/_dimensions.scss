@@ -1,11 +1,14 @@
-$spacing-flea: 5px;
-$spacing-ant: 10px;
-$spacing-mouse: 20px;
-$spacing-gerbil: 40px;
-$spacing-whale: 100px;
+$spacing-flea: 0.2rem;
+$spacing-ant: 0.5rem;
+$spacing-mouse: 1rem;
+$spacing-gerbil: 2rem;
+$spacing-cat: 3rem;
+$spacing-whale: 4rem;
 
-$small-breakpoint: 411px;
-$medium-breakpoint:  768px;
-$large-breakpoint: 1080px;
+$tiny-breakpoint: 350px; // iPhone 5/SE
+$small-breakpoint: 414px; // iPhone 6/7/8 Plus
+$medium-breakpoint:  768px; // iPad
+$large-breakpoint: 1024px; // iPad Pro
 
-$site-max-width: $large-breakpoint;
+$min-site-width: $tiny-breakpoint;
+$max-site-width: $large-breakpoint;

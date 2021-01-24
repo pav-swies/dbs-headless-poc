@@ -1,0 +1,19 @@
+.posts-header {
+  display: flex;
+  margin-top: $spacing-cat;
+  margin-bottom: $spacing-gerbil;
+}
+
+.posts-heading {
+  display: inline-block;
+  font-size: $font-size-flea;
+  font-family: $primary-font-bold;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

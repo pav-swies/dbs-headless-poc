@@ -1,30 +1,15 @@
-.wrapper {
+.global-wrapper {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: $spacing-mouse;
-  padding-right: $spacing-mouse;
+}
 
-  & > * {
+.wrapper {
+  width: 90%;
+  max-width: $max-site-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  > * {
     width: 100%;
-    max-width: $site-max-width;
-  }
-
-  & > :first-child {
-    margin-top: $spacing-mouse;
-
-    @include medium-breakpoint {
-      margin-top: $spacing-gerbil;
-    }
-  }
-
-  & > :last-child {
-    margin-bottom: $spacing-mouse;
-
-    @include medium-breakpoint {
-      margin-bottom: $spacing-gerbil;
-    }
   }
 }

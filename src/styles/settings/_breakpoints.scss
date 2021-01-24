@@ -1,3 +1,9 @@
+@mixin tiny-breakpoint {
+  @media screen and (min-width: $tiny-breakpoint) {
+    @content;
+  }
+}
+
 @mixin small-breakpoint {
   @media screen and (min-width: $small-breakpoint) {
     @content;

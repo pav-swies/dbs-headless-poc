@@ -3,15 +3,17 @@ import React from "react";
 import Header from "../components/component-header";
 import Footer from "../components/component-footer";
 
-const Layout = ({ headerTitle, footerTitle, location, children }) => {
+const Layout = ({ headerTitle, footerTitle, children, theme }) => {
 
   return (
-    <div className="wrapper">
-      <Header title={headerTitle} location={location} />
-      <main>
-        {children}
-      </main>
-      <Footer title={footerTitle} />
+    <div className={`global-wrapper theme-${ theme }`}>
+      <div className="wrapper">
+        <Header title={headerTitle} />
+        <main>
+          {children}
+        </main>
+        <Footer title={footerTitle} />
+      </div>
     </div>
   );
 };

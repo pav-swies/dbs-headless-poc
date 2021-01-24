@@ -1,0 +1,56 @@
+.home-hero {
+  max-width: 32rem;
+}
+
+.home-heading {
+  font-family: $primary-font-bold;
+  color: $beige-dark;
+  font-size: $font-size-flea;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-top: $spacing-gerbil;
+}
+
+.home-subheading {
+  color: $black;
+  font-family: $secondary-font-bold;
+  font-size: $font-size-mouse;
+  line-height: 1.2;
+  margin-top: $spacing-mouse;
+  margin-bottom: $spacing-gerbil;
+
+  @include medium-breakpoint {
+    font-size: $font-size-gerbil;
+    margin-bottom: $spacing-cat;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 40%;
+      right: -#{$spacing-ant};
+      bottom: -#{$spacing-ant};
+      left: -#{$spacing-ant};
+      background-color: $beige-highlight;
+      opacity: 0.4;
+      z-index: -1;
+    }
+  }
+}
+
+.home-featured {
+  margin-top: $spacing-whale;
+  padding-top: $spacing-gerbil;
+  border-top: 1px solid $beige-grey;
+}
+
+.home-featured-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

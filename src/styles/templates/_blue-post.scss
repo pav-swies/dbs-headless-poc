@@ -1,0 +1,41 @@
+.blue-post-header {
+  margin-top: $spacing-gerbil;
+  margin-bottom: $spacing-gerbil;
+}
+
+.blue-post-title {
+  font-family: $secondary-font-bold;
+  font-size: $font-size-mouse;
+  color: $black;
+  margin-bottom: $spacing-ant;
+
+  @include medium-breakpoint {
+    font-size: $font-size-gerbil;
+  }
+}
+
+.blue-post-info {
+  display: flex;
+  justify-content: space-between;
+  font-family: $primary-font-bold;
+}
+
+.blue-post-featured {
+  position: relative;
+  display: none;
+  font-size: $font-size-flea;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: $blue-dark;
+  }
+
+  &.featured-true {
+    display: block;
+  }
+}

@@ -12,19 +12,21 @@ slug:
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "content/posts/red"
     create: true
     fields:
+      - {label: "Make this post featured on the home page?", name: "featured", widget: "boolean", default: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown", date_format: "DD/MM/YYYY" }
-      - {label: "Type", name: "type", widget: "hidden", default: "blog"}
+      - {label: "Type", name: "type", widget: "hidden", default: "red"}
   - name: "work"
     label: "Work"
-    folder: "content/work"
+    folder: "content/posts/blue"
     create: true
     fields:
+      - {label: "Make this post featured on the home page?", name: "featured", widget: "boolean", default: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown", date_format: "DD/MM/YYYY" }
-      - {label: "Type", name: "type", widget: "hidden", default: "work"}
+      - {label: "Type", name: "type", widget: "hidden", default: "blue"}

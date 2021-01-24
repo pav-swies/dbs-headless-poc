@@ -1,53 +1,23 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: $spacing-gerbil;
+  justify-content: space-between;
   padding-top: $spacing-mouse;
   padding-bottom: $spacing-mouse;
-  border-bottom: 1px solid $dark-grey;
 
-  &--root {
-    border-bottom: none;
+  @include medium-breakpoint {
+    padding-top: $spacing-gerbil;
   }
 }
 
 .header-logo {
-  font-family: $heavy-font;
-  color: $blue;
-}
-
-a.header-logo {
-  font-size: $font-flea;
+  font-family: $secondary-font-bold;
+  font-size: $max-font-size;
+  color: $black;
   text-decoration: none;
-}
 
-h1.header-logo {
-  font-size: $font-flea;
-
-  @include small-breakpoint {
-    font-size: $font-gerbil;
-  }
-
-  @include medium-breakpoint {
-    font-size: $font-cat;
-  }
-}
-
-.header-links {
-  display: flex;
-
-  a {
-    + a {
-      margin-left: $spacing-mouse;
-  
-      @include medium-breakpoint {
-        margin-left: $spacing-gerbil;
-      }
-    }
-
-    &:last-child {
-      color: $blue;
-    }
+  &:hover {
+    text-decoration: underline;
+    text-decoration-style: double;
   }
 }

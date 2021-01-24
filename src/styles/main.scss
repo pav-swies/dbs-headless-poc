@@ -1,102 +1,24 @@
-@import "./settings/reset";
 @import "./settings/colours";
 @import "./settings/dimensions";
 @import "./settings/breakpoints";
 @import "./settings/typography";
 
+@import "./global/reset";
+@import "./global/global-styles";
+
 @import "./util/wrappers";
+@import "./util/visually-hidden";
 
-* {
-  font-family: $light-font;
-}
+@import "./themes/theme-beige";
+@import "./themes/theme-red";
+@import "./themes/theme-blue";
 
-html {
-  background-color: $white;
-  color: $grey;
-  font-size: 14px;
-}
+@import "./pages/index";
+@import "./pages/posts";
 
-body {
-  margin: 0;
-}
-
-a {
-  font-family: inherit;
-  color: inherit;
-  text-decoration: underline;
-  
-
-  &:hover {
-    color: $blue;
-    text-decoration-style: dashed;
-  }
-}
-
-h1 {
-  font-family: $heavy-font;
-  font-size: $font-dog;
-
-  @include medium-breakpoint {
-    font-size: $font-whale;
-  }
-}
-
-h2 {
-  font-family: $heavy-font;
-  font-size: $font-cat;
-
-  @include medium-breakpoint {
-    font-size: $font-horse;
-  }
-}
-
-h3 {
-  font-family: $heavy-font;
-  font-size: $font-gerbil;
-
-  @include medium-breakpoint {
-    font-size: $font-dog;
-  }
-}
-
-h4 {
-  font-family: $heavy-font;
-  font-size: $font-mouse;
-
-  @include medium-breakpoint {
-    font-size: $font-cat;
-  }
-}
-
-h5 {
-  font-family: $heavy-font;
-  font-size: $font-mouse;
-
-  @include medium-breakpoint {
-    font-size: $font-gerbil;
-  }
-}
-
-h6 {
-  font-family: $heavy-font;
-  font-size: $font-mouse;
-}
-
-p {
-  line-height: 1.8;
-  margin: 0;
-
-  & + & {
-    margin-top: $spacing-gerbil;
-  }
-}
-
-.blog-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+@import "./templates/blue-post";
+@import "./templates/red-post";
 
 @import "./components/component-header";
-@import "./components/component-blog-link";
+@import "./components/component-post-link";
 @import "./components/component-footer";

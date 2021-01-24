@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Headless PoC",
-    titleTemplate: "%s · The Real Hero",
+    title: "Don't be Shy",
     description: "A proof of concept site using a headless CMS.",
     url: "https://dbs-headless-poc.netlify.app",
   },
@@ -21,10 +20,18 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "blog",
+        name: "posts",
         path: "./content/",
       },
-      __key: "blog",
+      __key: "posts",
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/
+        }
+      }
     },
   ],
 };

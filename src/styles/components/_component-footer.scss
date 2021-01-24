@@ -1,9 +1,30 @@
 .footer {
-  color: $grey;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: $spacing-gerbil;
-  padding-top: $spacing-mouse;
-  padding-bottom: $spacing-mouse;
+  justify-content: space-between;
+  padding-top: $spacing-whale;
+  padding-bottom: $spacing-gerbil;
+
+  a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: $spacing-ant;
+
+    svg {
+      width: 100%;
+      height: auto;
+      fill: $black;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer-disclaimer {
+  font-size: $font-size-flea;
 }

@@ -4,14 +4,14 @@ import { graphql } from "gatsby";
 import Layout from "./template-layout";
 import Seo from "../components/component-seo";
 
-const Blog = ({ data, location }) => {
+const RedPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const pageTitle = `${frontmatter.title} | ${data.site.siteMetadata.title}`;
 
   return (
-    <Layout headerTitle={siteTitle} footerTitle={siteTitle} location={location} >
+    <Layout headerTitle={siteTitle} footerTitle={siteTitle} theme="red">
       <Seo
         title={pageTitle}
         description={data.markdownRemark.excerpt}
@@ -27,9 +27,9 @@ const Blog = ({ data, location }) => {
   );
 };
 
-export default Blog;
+export default RedPost;
 
-export const blogQuery = graphql`
+export const RedPostQuery = graphql`
   query ($id: String!) {
     site {
       siteMetadata {
