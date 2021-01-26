@@ -14,13 +14,6 @@ module.exports = {
         name: 'uploads',
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `./src/images`,
-        name: 'images',
-      },
-    },
     "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
