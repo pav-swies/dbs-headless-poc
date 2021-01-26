@@ -11,7 +11,7 @@ const BluePost = ({ data }) => {
   const pageTitle = `${frontmatter.title} | ${data.site.siteMetadata.title}`;
 
   return (
-    <Layout headerTitle={siteTitle} footerTitle={siteTitle} theme="blue">
+    <Layout headerTitle={siteTitle} theme="blue">
       <Seo
         title={pageTitle}
         description={data.markdownRemark.excerpt}

@@ -19,7 +19,7 @@ const PostsPage = ({
   const siteDescription = data.site.siteMetadata.description;
 
   return (
-    <Layout headerTitle={siteTitle} footerTitle={siteTitle} theme="beige">
+    <Layout headerTitle={siteTitle} theme="beige">
       <Seo
         title={siteTitle}
         description={siteDescription}

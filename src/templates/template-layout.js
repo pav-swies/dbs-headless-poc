@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../components/component-header";
 import Footer from "../components/component-footer";
 
-const Layout = ({ headerTitle, footerTitle, children, theme }) => {
+const Layout = ({ headerTitle, children, theme }) => {
 
   return (
     <div className={`global-wrapper theme-${ theme }`}>
@@ -12,7 +12,7 @@ const Layout = ({ headerTitle, footerTitle, children, theme }) => {
         <main>
           {children}
         </main>
-        <Footer title={footerTitle} />
+        <Footer />
       </div>
     </div>
   );

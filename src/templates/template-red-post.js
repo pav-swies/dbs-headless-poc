@@ -11,17 +11,17 @@ const RedPost = ({ data }) => {
   const pageTitle = `${frontmatter.title} | ${data.site.siteMetadata.title}`;
 
   return (
-    <Layout headerTitle={siteTitle} footerTitle={siteTitle} theme="red">
+    <Layout headerTitle={siteTitle} theme="red">
       <Seo
         title={pageTitle}
         description={data.markdownRemark.excerpt}
       />
-      <article className="o-doc">
-        <header className="o-doc__header">
-          <h1 className="o-doc__heading">{frontmatter.title}</h1>
-          <p className="o-doc__date">{frontmatter.date}</p>
+      <article className="red-post">
+        <header className="red-post-header">
+          <h1 className="red-post-heading">{frontmatter.title}</h1>
+          <p className="red-post-date">{frontmatter.date}</p>
         </header>
-        <div className="o-doc__content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="red-post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </Layout>
   );

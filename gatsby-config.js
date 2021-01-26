@@ -5,7 +5,6 @@ module.exports = {
     url: "https://dbs-headless-poc.netlify.app",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
@@ -32,6 +31,12 @@ module.exports = {
           include: /icons/
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: "./src/cms/cms.js",
+      },
     },
   ],
 };

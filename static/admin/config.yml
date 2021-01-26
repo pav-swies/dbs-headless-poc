@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  local_backend: true
   branch: main
 site_url: https://dbs-headless-poc.netlify.app/
 display_url: https://dbs-headless-poc.netlify.app/
@@ -10,23 +11,23 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "red"
+    label: "Red"
     folder: "content/posts/red"
     create: true
     fields:
       - {label: "Make this post featured on the home page?", name: "featured", widget: "boolean", default: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown", date_format: "DD/MM/YYYY" }
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Type", name: "type", widget: "hidden", default: "red"}
-  - name: "work"
-    label: "Work"
+  - name: "blue"
+    label: "Blue"
     folder: "content/posts/blue"
     create: true
     fields:
       - {label: "Make this post featured on the home page?", name: "featured", widget: "boolean", default: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown", date_format: "DD/MM/YYYY" }
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Type", name: "type", widget: "hidden", default: "blue"}
