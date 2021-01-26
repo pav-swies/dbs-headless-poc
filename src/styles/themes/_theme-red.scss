@@ -15,4 +15,11 @@
     color: $red;
     background-color: $red-dark;
   }
+
+  img {
+    margin-top: $spacing-gerbil;
+    margin-right: auto;
+    margin-bottom: $spacing-gerbil;
+    margin-left: auto;
+  }
 }

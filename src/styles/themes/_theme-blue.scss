@@ -15,4 +15,11 @@
     color: $blue;
     background-color: $blue-dark;
   }
+
+  img {
+    margin-top: $spacing-gerbil;
+    margin-right: auto;
+    margin-bottom: $spacing-gerbil;
+    margin-left: auto;
+  }
 }

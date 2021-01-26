@@ -42,6 +42,7 @@ export const BluePostQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      excerpt
       frontmatter {
         featured
         title
