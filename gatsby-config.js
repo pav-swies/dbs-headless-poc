@@ -41,16 +41,21 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images-v2`,
+            resolve: 'gatsby-remark-relative-images-v2',
+            options: {
+              name: 'uploads',
+            },
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1024,
+              linkImagesToOriginal: false,
+              quality: 90,
             },
           },
         ],
