@@ -5,8 +5,22 @@ module.exports = {
     url: "https://dbs-headless-poc.netlify.app",
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `./static/img`,
+        name: 'uploads',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `./src/images`,
+        name: 'images',
+      },
+    },
     "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
