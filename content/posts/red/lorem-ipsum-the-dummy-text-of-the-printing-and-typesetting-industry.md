@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 title: Lorem Ipsum - The Dummy Text of the Printing and Typesetting Industry
 date: 2021-01-27T09:53:36.351Z
 type: red
