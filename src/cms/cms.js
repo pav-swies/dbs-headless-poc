@@ -9,12 +9,12 @@ const RedPostPreview = ({ entry, widgetFor }) => {
 
   return (
     <Layout headerTitle="Don't be Shy" theme="red">
-      <article className="o-doc">
-        <header className="o-doc__header">
-          <h1 className="o-doc__heading">{data.title}</h1>
-          <p className="o-doc__date">{moment(data.date).format("Do MMMM YYYY")}</p>
+      <article className="red-post">
+        <header className="red-post-header">
+          <h1 className="red-post-title">{data.title}</h1>
+          <p className="red-post-date">{moment(data.date).format("Do MMMM YYYY")}</p>
         </header>
-        <div className="o-doc__content">
+        <div className="red-post-content">
           {widgetFor("body")}
         </div>
       </article>
