@@ -39,3 +39,17 @@
     display: block;
   }
 }
+
+.blue-post .gatsby-resp-image-wrapper {
+  margin-top: $spacing-cat;
+  margin-bottom: $spacing-cat;
+}
+
+.blue-post img {
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  width: 100%;
+  max-width: 640px;
+}

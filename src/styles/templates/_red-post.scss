@@ -1,0 +1,49 @@
+.red-post-header {
+  margin-top: $spacing-gerbil;
+  margin-bottom: $spacing-gerbil;
+}
+
+.red-post-title {
+  font-family: $secondary-font-bold;
+  font-size: $font-size-mouse;
+  color: $black;
+  margin-bottom: $spacing-ant;
+
+  @include medium-breakpoint {
+    font-size: $font-size-gerbil;
+  }
+}
+
+.red-post-info {
+  display: flex;
+  justify-content: space-between;
+  font-family: $primary-font-bold;
+}
+
+.red-post-featured {
+  position: relative;
+  display: none;
+  font-size: $font-size-flea;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: $red-dark;
+  }
+
+  &.featured-true {
+    display: block;
+  }
+}
+
+.red-post img {
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  max-width: 64px;
+}

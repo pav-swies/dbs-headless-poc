@@ -18,8 +18,11 @@ const RedPost = ({ data }) => {
       />
       <article className="red-post">
         <header className="red-post-header">
-          <h1 className="red-post-heading">{frontmatter.title}</h1>
-          <p className="red-post-date">{frontmatter.date}</p>
+          <h1 className="red-post-title">{frontmatter.title}</h1>
+          <div className="red-post-info">
+            <p className="red-post-date">{frontmatter.date}</p>
+            <p className={`red-post-featured featured-${frontmatter.featured}`}>Featured ★</p>
+          </div>
         </header>
         <div className="red-post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
@@ -41,6 +44,7 @@ export const RedPostQuery = graphql`
       html
       excerpt
       frontmatter {
+        featured
         title
         date(formatString: "Do MMMM YYYY")
       }
