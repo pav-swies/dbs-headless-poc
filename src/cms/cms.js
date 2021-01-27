@@ -70,34 +70,3 @@ CMS.registerEditorComponent({
     );
   }
 });
-
-// CMS.registerEditorComponent({
-//   // Internal id of the component
-//   id: "icon-and-text",
-//   // Visible label
-//   label: "Icon and Text",
-//   // Fields the user need to fill out when adding an instance of the component
-//   fields: [
-//     {name: 'icon', label: 'Icon', widget: 'image'},
-//     {name: 'text', label: 'Text', widget: 'text'}
-//   ],
-//   // Pattern to identify a block as being an instance of this component
-//   pattern: /^icon-and-text (\S+)$/,
-//   // Function to extract data elements from the regexp match
-//   fromBlock: function(match) {
-//     return {
-//       id: match[1]
-//     };
-//   },
-//   // Function to create a text block from an instance of this component
-//   toBlock: function(obj) {
-//     return 'icon-and-text ' + obj.id;
-//   },
-//   // Preview output for this component. Can either be a string or a React component
-//   // (component gives better render performance)
-//   toPreview: function(obj) {
-//     return (
-//       '<img src="http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
-//     );
-//   }
-// });
