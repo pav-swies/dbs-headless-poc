@@ -1,13 +1,13 @@
 .blue-post-header {
   margin-top: $spacing-gerbil;
-  margin-bottom: $spacing-gerbil;
+  margin-bottom: $spacing-whale;
 }
 
 .blue-post-title {
   font-family: $secondary-font-bold;
   font-size: $font-size-mouse;
   color: $black;
-  margin-bottom: $spacing-ant;
+  margin-bottom: $spacing-gerbil;
 
   @include medium-breakpoint {
     font-size: $font-size-gerbil;

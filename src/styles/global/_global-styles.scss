@@ -6,10 +6,14 @@
 h1:not([class]) {
   font-family: $secondary-font-bold;
   font-size: $font-size-gerbil;
+  margin-top: $spacing-gerbil;
+  margin-bottom: $spacing-mouse;
 }
 h2:not([class]) {
   font-family: $secondary-font-bold;
   font-size: $font-size-mouse;
+  margin-top: $spacing-gerbil;
+  margin-bottom: $spacing-mouse;
 }
 
 h3:not([class]),
@@ -18,6 +22,8 @@ h5:not([class]),
 h6:not([class]) {
   font-family: $secondary-font-bold;
   font-size: $font-size-ant;
+  margin-top: $spacing-gerbil;
+  margin-bottom: $spacing-mouse;
 }
 
 a {
@@ -31,4 +37,9 @@ a {
 
 p:not([class]) + p:not([class]) {
   margin-top: $spacing-mouse;
+}
+
+b,
+strong {
+  font-family: $primary-font-bold;
 }
