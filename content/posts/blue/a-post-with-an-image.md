@@ -1,5 +1,5 @@
 ---
-featured: false
+featured: true
 title: A Post with an Image
 date: 2021-01-26T15:34:55.086Z
 type: blue
