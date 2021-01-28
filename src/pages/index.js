@@ -27,7 +27,7 @@ const IndexPage = ({
       <section className="home-hero">
         <h1 className="home-heading">Headless PoC -</h1>
         <p className="home-subheading">Built with <a href="https://gatsbyjs.com/" target="_blank" rel="noreferrer">Gatsby</a>,<br /> content managed with<br /> <a href="https://www.netlifycms.org/" target="_blank" rel="noreferrer">Netflix CMS</a>.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi necessitatibus blanditiis eaque cum enim quis nisi minima, accusantium sunt.</p>
+        <p>A concept Gatsby website featuring a headless CMS with live preview, Sass for styling, and plugins such as sharp/remark-image for responsive, lazy loaded images.</p>
       </section>
       <div className="home-featured">
         <h2 className="home-heading">★ Featured Posts -</h2>

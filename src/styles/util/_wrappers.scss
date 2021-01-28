@@ -13,3 +13,14 @@
     width: 100%;
   }
 }
+
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacing-cat;
+  margin-bottom: $spacing-cat;
+
+  iframe {
+    max-width: 100%;
+  }
+}
