@@ -1,6 +1,6 @@
 ---
-featured: true
-title: A Post with an Image
+featured: false
+title: A Post with Random Images
 date: 2021-01-26T15:34:55.086Z
 type: blue
 ---
