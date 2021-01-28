@@ -1,5 +1,5 @@
 ---
-featured: false
+featured: true
 title: Headless PoC - Gatsby with Netlify CMS Findings
 date: 2021-01-28T00:38:40.863Z
 type: blue
