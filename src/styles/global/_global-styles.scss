@@ -12,7 +12,7 @@ h1:not([class]) {
 h2:not([class]) {
   font-family: $secondary-font-bold;
   font-size: $font-size-mouse;
-  margin-top: $spacing-gerbil;
+  margin-top: $spacing-cat;
   margin-bottom: $spacing-mouse;
 }
 
@@ -42,4 +42,13 @@ p:not([class]) + p:not([class]) {
 b,
 strong {
   font-family: $primary-font-bold;
+}
+
+ul {
+  margin-bottom: $spacing-gerbil;
+  list-style-type: square;
+}
+
+li + li {
+  margin-top: $spacing-mouse;
 }

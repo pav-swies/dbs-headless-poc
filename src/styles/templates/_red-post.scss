@@ -40,6 +40,11 @@
   }
 }
 
+.red-post .gatsby-resp-image-wrapper {
+  margin-top: $spacing-cat;
+  margin-bottom: $spacing-cat;
+}
+
 .red-post img {
   margin-top: 3rem;
   margin-right: auto;
